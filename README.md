@@ -79,6 +79,8 @@ This project is ideal for creators, developers, founders, and anyone interested 
 - [Drizzle ORM](https://orm.drizzle.team) for type-safe database operations
 - [ShadCN UI](https://ui.shadcn.com/) for UI components
 - [Next.js](https://nextjs.org) for the powerful framework
+- [TypeScript](https://www.typescriptlang.org/) for type safety and improved developer experience
+- [Tailwind CSS](https://tailwindcss.com) for the utility-first styling system
 
 ---
 
