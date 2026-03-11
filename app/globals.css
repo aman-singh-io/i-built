@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+:root {
+  /* Palette Claire : Minimaliste et Aérée */
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.15 0.02 240);
+  --card: oklch(1 0 0 / 0.7); /* Effet verre */
+  --card-foreground: oklch(0.15 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 240);
+  --primary: oklch(0.55 0.22 260); /* Indigo Vibrant */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.03 260);
+  --secondary-foreground: oklch(0.3 0.1 260);
+  --muted: oklch(0.92 0.01 240);
+  --muted-foreground: oklch(0.45 0.02 240);
+  --accent: oklch(0.65 0.18 190); /* Cyan Électrique */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.6 0.18 20);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.02 240);
+  --input: oklch(0.9 0.02 240);
+  --ring: oklch(0.55 0.22 260 / 0.5);
+  --chart-1: oklch(0.55 0.22 260);
+  --chart-2: oklch(0.65 0.18 190);
+  --chart-3: oklch(0.75 0.15 140);
+  --chart-4: oklch(0.85 0.12 80);
+  --chart-5: oklch(0.6 0.18 20);
+  --sidebar: oklch(0.98 0.01 240);
+  --sidebar-foreground: oklch(0.2 0.02 240);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: white;
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--primary);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia;
+  --font-mono: "JetBrains Mono", monospace;
+  --radius: 1rem; /* Arrondis plus modernes */
+  --shadow-color: 240 10% 10%;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 4px 12px -2px rgb(0 0 0 / 0.08), 0 2px 6px -1px rgb(0 0 0 / 0.04);
+  --shadow-md:
+    0 12px 24px -4px rgb(0 0 0 / 0.12), 0 4px 12px -2px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 20px 40px -8px rgb(0 0 0 / 0.15);
+  --shadow-xl: 0 25px 60px -12px rgb(0 0 0 / 0.25);
+  --shadow-2xl: 0 35px 80px -15px rgb(0 0 0 / 0.3);
+  --tracking-normal: -0.01em; /* Typographie plus serrée et pro */
+  --spacing: 0.25rem;
+}
+
+.dark {
+  /* Palette Sombre : Deep Navy & Neon */
+  --background: oklch(0.12 0.02 250);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.16 0.03 250 / 0.8);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.14 0.03 250);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.7 0.18 260); /* Indigo plus lumineux en dark */
+  --primary-foreground: oklch(0.1 0.02 250);
+  --secondary: oklch(0.22 0.04 250);
+  --secondary-foreground: oklch(0.85 0.05 260);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.7 0.02 250);
+  --accent: oklch(0.75 0.15 190);
+  --accent-foreground: oklch(0.1 0.02 250);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.25 0.03 250);
+  --input: oklch(0.25 0.03 250);
+  --ring: oklch(0.7 0.18 260 / 0.4);
+  --sidebar: oklch(0.1 0.02 250);
+  --sidebar-foreground: oklch(0.9 0.01 250);
+  --sidebar-border: oklch(0.2 0.03 250);
+}
+
+@theme inline {
+  /* Redéfinition des ombres pour support variable */
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/30 p-0 m-0 transition-colors duration-200;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-primary/20 selection:text-primary antialiased;
+  }
+}
+
+@layer components {
+  .grid-wrapper {
+    @apply grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 p-4;
+  }
+
+  .wrapper {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  /* Card Premium : Soft border + Blur */
+  .card-hover {
+    @apply border bg-card/50 backdrop-blur-md hover:bg-card hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out;
+  }
+
+  /* Empty state : Plus doux */
+  .empty-state {
+    @apply border border-dashed border-muted-foreground/30 rounded-3xl p-16 text-center bg-muted/5;
+  }
+
+  /* Badge card : Style "Bento" */
+  .status-badge-card {
+    @apply border rounded-2xl p-6 bg-secondary/30 hover:bg-secondary/50 transition-all border-transparent hover:border-border;
+  }
+
+  /* Meta info : Typographie raffinée */
+  .meta-info {
+    @apply flex flex-wrap items-center gap-4 text-xs font-medium uppercase tracking-wider text-muted-foreground;
+  }
+
+  /* Header de section : Plus d'impact */
+  .section-header-with-count {
+    @apply flex items-end justify-between mb-10 pb-4 border-b border-border/50;
+  }
+}
